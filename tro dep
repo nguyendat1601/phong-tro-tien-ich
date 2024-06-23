@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cho Thuê Phòng Trọ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cho Thuê Phòng Trọ</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li><a href="#rooms">Phòng Trọ</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Chào Mừng Đến Với Trang Cho Thuê Phòng Trọ</h2>
+        <p>Tìm kiếm phòng trọ phù hợp với nhu cầu của bạn ngay tại đây!</p>
+    </section>
+
+    <section id="about">
+        <h2>Giới Thiệu</h2>
+        <p>Chúng tôi cung cấp dịch vụ cho thuê phòng trọ với nhiều tiện ích và giá cả phải chăng.</p>
+    </section>
+
+    <section id="rooms">
+        <h2>Danh Sách Phòng Trọ</h2>
+        <div class="room-list">
+            <div class="room">
+                <img src="room1.jpg" alt="Phòng Trọ 1">
+                <h3>Phòng Trọ 1</h3>
+                <p>Giá: 3.000.000 VND/Tháng</p>
+                <p>Tiện ích: Wifi, Điều hòa, Gần chợ</p>
+            </div>
+            <div class="room">
+                <img src="room2.jpg" alt="Phòng Trọ 2">
+                <h3>Phòng Trọ 2</h3>
+                <p>Giá: 2.500.000 VND/Tháng</p>
+                <p>Tiện ích: Wifi, Gần trường đại học</p>
+            </div>
+            <!-- Thêm các phòng trọ khác tương tự -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên Hệ</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Lời Nhắn:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cho Thuê Phòng Trọ. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.room-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+}
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm nhất.");
+        this.reset();
+    });
+</script>
